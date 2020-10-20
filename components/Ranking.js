@@ -4,17 +4,18 @@ import {
     Image,
     Text,
     StyleSheet,
+    TouchableOpacity
 } from 'react-native';
 
 export default function Ranking(props) {
     return (
-        <View style={styles.teamContainer}>
+        <TouchableOpacity style={styles.teamContainer} onPress={props.onPress}>
           <Image style={styles.container} source={props.logo}/>
           <View style={styles.textContainer} >
             <Text>{props.name}</Text>
             <Text>{props.w} - {props.l}</Text>
           </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 

@@ -15,7 +15,8 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Home from './components/Home.js';
+import Home from './components/Home';
+import Details from './components/Details';
 
 
 const Stack = createStackNavigator();
@@ -29,6 +30,7 @@ export default function App() {
     <NavigationContainer>
         <Navigator initialRouteName="Home">
           <Screen name="Home" component={Home} />
+          <Screen name="Details" component={Details} />
         </Navigator>
     </NavigationContainer>
   );
