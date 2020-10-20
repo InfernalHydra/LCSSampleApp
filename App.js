@@ -5,36 +5,31 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
-  FlatList,
 } from 'react-native';
 
-import Ranking from './components/Ranking';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-import DATA from './data/lcs';
+import Home from './components/Home.js';
+
+
+const Stack = createStackNavigator();
+
+const Screen = Stack.Screen;
+const Navigator = Stack.Navigator;
 
 export default function App() {
 
-  const renderItem = ({item}) => (
-    <Ranking name={item.name} w={item.w} l={item.l} logo={item.logo} />
-  );
-
-  console.log(DATA);
-
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <FlatList
-          data={DATA}
-          renderItem={renderItem}
-          keyExtractor={item => String(item.rank)}
-        />
-      </SafeAreaView>
-    </>
+    <NavigationContainer>
+        <Navigator initialRouteName="Home">
+          <Screen name="Home" component={Home} />
+        </Navigator>
+    </NavigationContainer>
   );
 };
