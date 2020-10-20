@@ -1,0 +1,78 @@
+{
+    "teams" : [
+        {
+            "name" : "Team Liquid",
+            "abbreviation" : "TL",
+            "w" : 15,
+            "l" : 3,
+            "rank" : 1,
+            "logo" : require(./data/TL.png)
+        },
+        {
+            "name" : "Cloud9",
+            "abbreviation" : "C9",
+            "w" : 13,
+            "l" : 5,
+            "rank" : 2,
+            "logo" : "./C9.png"
+        },
+        {
+            "name" : "FlyQuest",
+            "abbreviation" : "FQ",
+            "w" : 12,
+            "l" : 6,
+            "rank" : 0,
+            "logo" : "./FQ.png"
+        },
+        {
+            "name" : "TSM",
+            "abbreviation" : "TSM",
+            "w" : 12,
+            "l" : 6,
+            "logo" : "./TSM.png"
+        },
+        {
+            "name" : "Golden Guardians",
+            "abbreviation" : "GG",
+            "w" : 9,
+            "l" : 9,
+            "logo" : "./GG.png"
+        },
+        {
+            "name" : "Evil Geniuses",
+            "abbreviation" : "EG",
+            "w" : 8,
+            "l" : 10,
+            "logo" : "./EG.png"
+        },
+        {
+            "name" : "Dignatas",
+            "abbreviation" : "DIG",
+            "w" : 6,
+            "l" : 13,
+            "logo" : "./DIG.png"
+        },
+        {
+            "name" : "100 Thieves",
+            "abbreviation" : "100",
+            "w" : 7,
+            "l" : 11,
+            "logo" : "./100.png"
+        },
+        {
+            "name" : "Counter Logic Gaming",
+            "abbreviation" : "CLG",
+            "w" : 5,
+            "l" : 14,
+            "logo" : "./CLG.png"
+        },
+        {
+            "name" : "Immortals",
+            "abbreviation" : "IMT",
+            "w" : 4,
+            "l" : 14,
+            "logo" : "./IMT.png"
+        }
+    ]
+
+}
