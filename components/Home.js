@@ -29,7 +29,7 @@ export default function Home({navigation}) {
               <Text>{w} - {l}</Text>
             </View>
             <View>
-                <TouchableOpacity style={{alignSelf: "flex-end", backgroundColor: 'red', flexGrow: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <TouchableOpacity style={styles.favoritesButton} onPress = {() => setFavorites([...favorites, item])}>
                     <Text>Add to Favorites</Text>
                 </TouchableOpacity>
             </View>
@@ -79,5 +79,12 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         // alignItems: 'center',
         justifyContent: 'center',
+    },
+    favoritesButton : {
+        alignSelf: "flex-end",
+        backgroundColor: 'red',
+        flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
