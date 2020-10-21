@@ -10,10 +10,15 @@ import {
     Image
 } from 'react-native';
 
+// Normally we would fetch data from a database, but for simplicity, we are simply going to read from a file
+// If you want to look into fetching data from a server, look into fetch() and useEffect()
 import DATA from '../data/lcs';
 
 export default function Home({navigation}) {
 
+    // These are React Hooks
+    // These encapsulate various React.js functionality that used to be based on class methods
+    // For instance, the class state object was overriden by these
     const [favorites, setFavorites] = useState([]);
     const [filterFavorites, setFilterFavorites] = useState(false);
 
