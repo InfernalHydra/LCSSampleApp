@@ -7,8 +7,10 @@ import {
 } from 'react-native';
 
 export default function Details({ route }) {
-    console.log(route.params);
+    // Gets the data we passed into this screen
     const {name, logo} = route.params;
+
+    // And we render ourself based on that!
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{name}</Text>

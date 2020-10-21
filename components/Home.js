@@ -19,11 +19,15 @@ export default function Home({navigation}) {
     // These are React Hooks
     // These encapsulate various React.js functionality that used to be based on class methods
     // For instance, the class state object was overriden by these
+
+    // What are my favorite teams?
     const [favorites, setFavorites] = useState([]);
+
+    // Am I only looking at my favorite teams or am I looking at everyone?
     const [filterFavorites, setFilterFavorites] = useState(false);
 
     const renderItem = ({item}) => {
-        // This should really be its own component, but I'm gonna make things a bit simple here
+        // This should really be its own component, but I'm gonna make things a bit simple for us here
         // If you choose to make this your own component, look into useReducer(), useContext(), and/or passing callbacks as props
         let {name, logo, w, l} = item;
         return (
@@ -33,15 +37,20 @@ export default function Home({navigation}) {
               <Text>{name}</Text>
               <Text>{w} - {l}</Text>
             </View>
-            <View>
-                <TouchableOpacity style={styles.favoritesButton} onPress = {() => setFavorites([...favorites, item])}>
-                    <Text>Add to Favorites</Text>
-                </TouchableOpacity>
-            </View>
+            {filterFavorites ? null :
+                <View>
+                    <TouchableOpacity style={styles.favoritesButton} onPress = {() => setFavorites([...favorites, item])}>
+                        <Text>Add to Favorites</Text>
+                    </TouchableOpacity>
+                </View>
+            }
           </TouchableOpacity>
+
         );
     };
 
+    // Where the magic happens
+    // Based on data, we render the elements that we want to see!
     return (
         <>
             <StatusBar barStyle="dark-content" />

@@ -15,6 +15,7 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
+// Get the components that we have written
 import Home from './components/Home';
 import Details from './components/Details';
 
@@ -25,7 +26,7 @@ const Screen = Stack.Screen;
 const Navigator = Stack.Navigator;
 
 export default function App() {
-
+  // Plugs in components into React Navigation
   return (
     <NavigationContainer>
         <Navigator initialRouteName="Home">
