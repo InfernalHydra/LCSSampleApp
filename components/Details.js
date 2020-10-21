@@ -18,14 +18,14 @@ export default function Details({ route }) {
 }
 
 const styles = StyleSheet.create({
-    "container" : {
+    container : {
         backgroundColor: 'powderblue',
         alignItems: 'center',
         flex: 1,
         flexGrow: 1
     },
-    "title" : {
+    title : {
         fontSize: 30
-    }
+    },
 });
 
