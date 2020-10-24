@@ -31,11 +31,6 @@ export default function Home({navigation}) {
         // If you choose to make this your own component, look into useReducer(), useContext(), and/or passing callbacks as props
         let {name, logo, w, l} = item;
 
-        const removeFromFavorites = (item) => {
-            const index = favorites.findIndex(currItem => currItem.name === item.name);
-            setFavorites([...favorites.slice(0, index), ...favorites.slice(index + 1)]);
-        }
-
         return (
           <TouchableOpacity style={styles.teamContainer} onPress={() => navigation.navigate('Details', {name, logo})}>
             <Image style={styles.container} source={logo}/>
@@ -43,14 +38,7 @@ export default function Home({navigation}) {
               <Text>{name}</Text>
               <Text>{w} - {l}</Text>
             </View>
-            {filterFavorites ?
-                <View>
-                    <TouchableOpacity style={styles.favoritesButton} onPress = {() => removeFromFavorites(item)}>
-                        <Text>Remove from favorites</Text>
-                    </TouchableOpacity>
-                </View>
-
-            :
+            {filterFavorites ? null :
                 <View>
                     <TouchableOpacity style={styles.favoritesButton} onPress = {() => setFavorites([...favorites, item])}>
                         <Text>Add to Favorites</Text>
